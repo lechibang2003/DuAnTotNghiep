@@ -33,6 +33,7 @@ body {
     --body-color: rgba(255, 255, 255, 0.5);
     --bgtoggle-color: rgba(255, 255, 255, 0.3);
     --bgthree-color: rgba(255, 255, 255, 0.5);
+    --cart-item-color: rgba(222, 222, 222, 0.8);
     --iframe-color: rgba(255, 255, 255, 0.8);
     --button-color: rgb(219, 2, 2);
     --sidebar-color: #0d1116;
@@ -264,91 +265,43 @@ body {
     border-radius: 10px;
 }
 
-.banner-big .wraper aside .container-fluid .address-section .address-card {
+.banner-big .wraper aside .shopping-cart-container {
+    position: relative;
+    background: var(--bgtoggle-color);
+    border-radius: 10px;
+}
+
+/* search */
+.container-fluid .search-box {
+    position: relative;
     display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
-.banner-big .wraper aside .container-fluid .address-section .address-card .name,
-.phone {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.banner-big .wraper aside .container-fluid .address-section .text-location {
-    text-decoration: none;
-}
-
-.banner-big .wraper aside .container-fluid .address-section .location {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    content: '...';
-    display: flex;
-}
-
-.banner-big .wraper aside .container-fluid .address-section .location label {
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.banner-big .wraper aside .container-fluid .address-section .modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.banner-big .wraper aside .container-fluid .address-section .modal-content {
-    background-color: var(--iframe-color);
-    margin: 10% auto;
-    padding: 30px;
-    border: 1px solid #888;
-    max-width: 600px;
-}
-
-.banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-    padding: 7px;
+.container-fluid .search-box .search {
+    width: 300px;
+    height: 35px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: 80px;
+    outline: none;
     border: none;
-    color: #101010;
-    float: left;
-    border-radius: 5px;
-    background: rgb(231, 231, 231);
 }
 
-.banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-    background: rgb(240, 240, 240);
-}
-
-
-.banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-    padding: 7px;
+.container-fluid .search-box .icon-search {
+    position: absolute;
+    width: 40px;
+    height: 35px;
+    margin-right: 40px;
     border: none;
-    color: #ffffff;
-    float: right;
-    background: rgb(205, 9, 9);
-    border-radius: 5px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
-.banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-    background: rgb(223, 17, 17);
-}
+/* end */
 
-.banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-    background: none;
-    color: black;
-    border: 1px solid rgb(190, 190, 190);
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-/* sản phẩm cần thanh toán */
+/* sản phẩm trong giỏ hàng */
 
 .banner-big .wraper aside .container-fluid .product-container {
     width: 100%;
@@ -365,7 +318,14 @@ body {
 }
 
 .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-    flex-basis: 30%;
+    flex-basis: 35%;
+}
+
+.banner-big .wraper aside .container-fluid .product-container .product-row .product-cell1 {
+    padding-right: 31%;
+    margin-left: 30px;
+    flex-basis: 75%;
+    font-size: 18px;
 }
 
 .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
@@ -377,6 +337,7 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     content: '...';
+    padding-right: 265px;
 }
 
 .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
@@ -384,13 +345,10 @@ body {
     text-align: right;
 }
 
-.banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-    font-size: 19px;
-}
-
 .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-    width: 100px;
+    width: 190px;
     height: 80px;
+    margin-left: 18px;
     padding-right: 0px;
     cursor: pointer;
     object-fit: cover;
@@ -403,61 +361,99 @@ body {
     align-items: center;
 }
 
-/* phương thức thanh toán */
-.banner-big .wraper aside .container-fluid .tab-pane-payment {
-    gap: 20px;
+.banner-big .wraper aside .container-fluid .product-container .product-row .checkb_product {
+    transform: scale(1.5);
+}
+
+/*  */
+
+.banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
     display: flex;
-    align-items: center;
+    position: relative;
+    right: 85px;
+    margin-right: -60px;
+    margin-left: 15px;
 }
 
-.banner-big .wraper aside .container-fluid .tab-pane-payment button {
-    color: black;
-    border-radius: 5px;
-    border: 1px solid rgb(135, 135, 135);
+.banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity input {
+    width: 50px;
+    height: 30px;
+    border: none;
+    outline: none;
+    text-align: center;
 }
 
-.banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-    background: rgb(228, 52, 52);
-    color: white;
+.banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity .button-cong,
+.button-tru {
+    border: none;
+    outline: none;
+    width: 25px;
 }
 
-.banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-.banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-    background: rgb(228, 52, 52);
-    color: white;
-}
+/* phương thức thanh toán */
 
-.banner-big .wraper aside .container-fluid .container-fluid-payment {
+.banner-big .wraper aside .shopping-cart-container .payment-container {
     text-align: right;
     line-height: 40px;
     font-size: 17px;
 }
 
-.banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
-    margin-right: 40px;
-}
-
-.banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
+.banner-big .wraper aside .shopping-cart-container .payment-container .text-payment:first-of-type {
     padding-right: 45px;
 }
 
-.banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-    padding-right: 89px;
-}
-
-.banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
+.banner-big .wraper aside .shopping-cart-container .payment-container .price-payment-sum {
     font-size: 25px;
     font-weight: bold;
     color: rgb(219, 0, 0);
 }
 
-.banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
+.banner-big .wraper aside .shopping-cart-container .payment-container .btn-thanhtoan {
     margin-right: 25px;
     padding-left: 20px;
     padding-right: 20px;
     width: 200px;
     height: 40px;
 }
+
+.shopping-cart-container .selecall {
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.shopping-cart-container {
+    position: relative;
+}
+
+.payment-container {
+    position: sticky;
+    bottom: 0;
+    padding: 20px 0;
+}
+
+.payment-container.sticky {
+    position: fixed;
+    /* Đặt vị trí fixed ở đầu trang */
+    right: 11.5%;
+    bottom: 10px;
+    z-index: 999;
+    width: 77%;
+    background: var(--cart-item-color);
+    border-radius: 10px;
+}
+
+.shopping-cart-container .chk-all input {
+    width: 30px;
+    height: 18px;
+}
+
 
 
 /* end */
@@ -633,100 +629,32 @@ footer {
         padding: 30px;
     }
 
-    .banner-big .wraper aside .container-fluid {
+    /*  */
+    /* search */
+    .container-fluid .search-box {
         position: relative;
-        background: var(--bgtoggle-color);
-        border-radius: 10px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card {
         display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 100px;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-40%, -50%);
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .address-card .name,
-    .phone {
-        font-weight: bold;
-        font-size: 18px;
-        width: 300px;
+    .container-fluid .search-box .search {
+        width: 150px;
+        height: 35px;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .text-location {
-        text-decoration: none;
-        width: 300px;
+    .container-fluid .search-box .icon-search {
+        position: absolute;
+        width: 40px;
+        height: 35px;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .location {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-        display: none;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location label {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content {
-        background-color: var(--iframe-color);
-        margin: 10% auto;
-        padding: 30px;
-        border: 1px solid #888;
-        max-width: 600px;
-        z-index: 9999;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-        padding: 7px;
-        border: none;
-        color: #101010;
-        float: left;
-        border-radius: 5px;
-        background: rgb(231, 231, 231);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-        background: rgb(240, 240, 240);
-    }
-
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-        padding: 7px;
-        border: none;
-        color: #ffffff;
-        float: right;
-        background: rgb(205, 9, 9);
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-        background: rgb(223, 17, 17);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-        background: none;
-        color: black;
-        border: 1px solid rgb(190, 190, 190);
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    /* sản phẩm cần thanh toán */
+    /* end */
 
     .banner-big .wraper aside .container-fluid .product-container {
         width: 100%;
@@ -743,7 +671,6 @@ footer {
         justify-content: space-between;
         border-bottom: 1px solid #ccc;
         padding: 10px;
-        align-items: center;
         height: 250px;
         display: flex;
         flex-direction: column;
@@ -753,121 +680,127 @@ footer {
         margin-top: 30px;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-        flex-basis: 20%;
-        white-space: nowrap;
+    .banner-big .wraper aside .container-fluid {
+        font-size: 14px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell1 {
+        position: relative;
+        top: 20px;
+        font-size: 15px;
+        line-height: 24px;
+        padding-bottom: 80px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
-        flex-basis: 20%;
-        display: flex;
-        font-size: 18px;
-        padding-left: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
+        flex-basis: 10%;
+        display: none;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .checkb_product {
+        position: relative;
+        left: 50px;
+        top: 30px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
-        flex-basis: 15%;
         text-align: right;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-        font-size: 19px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
+        flex-basis: 52%;
+    }
+
+    .product-cell1+.product-cell+.product-cell+.product-cell {
+        padding-left: 15px;
+    }
+
+    .checkb_product+.img-cell+.product-cell-name+.product-cell+.product-cell+.product-quantity+.product-cell {
+        position: relative;
+        top: 15px;
+    }
+
+    .checkb_product+.img-cell+.product-cell-name+.product-cell+.product-cell+.product-quantity+.product-cell+.button-xoa {
+        position: relative;
+        top: 15px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-        width: 70px;
-        height: 60px;
+        position: relative;
+        left: auto;
+        top: 0;
+        margin-top: 0;
         margin: 0;
         padding: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
+        position: relative;
+        right: 38px;
+        padding-top: 20px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity input {
+        width: 30px;
+        height: 20px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity .button-cong,
+    .button-tru {
+        border: none;
+        outline: none;
+        width: 20px;
+        height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row:last-of-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* phương thức thanh toán */
-    .banner-big .wraper aside .container-fluid .tab-pane-payment {
-        gap: 20px;
-        display: flex;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button {
-        color: black;
-        border-radius: 5px;
-        border: 1px solid rgb(134, 134, 134);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 14px;
-        width: 215px;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment {
-        text-align: right;
-        line-height: 40px;
-        font-size: 17px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
-        font-size: 14px;
-        float: left;
-        margin: 0;
-        padding: 0;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
-        padding-right: 45px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-        padding-right: 89px;
-        font-size: 14px;
-        float: left;
-        margin: 0;
-        padding: 0;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
-        font-size: 18px;
-        font-weight: bold;
-        color: rgb(219, 0, 0);
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment {
-        font-size: 14px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
-        margin-right: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 200px;
-        height: 40px;
+    /*  */
+    .banner-big .wraper aside .shopping-cart-container .payment-container {
         text-align: center;
     }
 
+    .banner-big .wraper aside .shopping-cart-container .payment-container .text-payment:first-of-type {
+        padding-right: 0;
+    }
+
+    .banner-big .wraper aside .shopping-cart-container .payment-container .price-payment-sum {
+        font-size: 22px;
+    }
+
+    .shopping-cart-container .selecall {
+        position: relative;
+        font-size: 15px;
+        right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-big .wraper aside .shopping-cart-container .payment-container .btn-thanhtoan {
+        margin-right: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        height: 40px;
+    }
+
+    .payment-container.sticky {
+        position: fixed;
+        right: 17%;
+        bottom: 10px;
+        z-index: 999;
+        width: 66%;
+        padding: 15px;
+        background: var(--cart-item-color);
+        border-radius: 10px;
+    }
+
 }
+
 
 @media only screen and (min-width: 576px) and (max-width: 766.5px) {
 
@@ -989,105 +922,41 @@ footer {
         padding: 30px;
     }
 
-    .banner-big .wraper aside .container-fluid {
+    /*  */
+    /* search */
+    .container-fluid .search-box {
         position: relative;
-        background: var(--bgtoggle-color);
-        border-radius: 10px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card {
         display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 100px;
+        text-align: center;
+        left: 50%;
+        top: 50%;
+        transform: translate(-45%, -50%);
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .address-card .name,
-    .phone {
-        font-weight: bold;
-        font-size: 18px;
-        width: 400px;
+    .container-fluid .search-box .search {
+        width: 300px;
+        height: 35px;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .text-location {
-        text-decoration: none;
-        width: 400px;
+    .container-fluid .search-box .icon-search {
+        position: absolute;
+        width: 40px;
+        height: 35px;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .location {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location label {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content {
-        background-color: var(--iframe-color);
-        margin: 10% auto;
-        padding: 30px;
-        border: 1px solid #888;
-        max-width: 600px;
-        z-index: 9999;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-        padding: 7px;
-        border: none;
-        color: #101010;
-        float: left;
-        border-radius: 5px;
-        background: rgb(231, 231, 231);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-        background: rgb(240, 240, 240);
-    }
-
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-        padding: 7px;
-        border: none;
-        color: #ffffff;
-        float: right;
-        background: rgb(205, 9, 9);
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-        background: rgb(223, 17, 17);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-        background: none;
-        color: black;
-        border: 1px solid rgb(190, 190, 190);
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    /* sản phẩm cần thanh toán */
+    /* end */
 
     .banner-big .wraper aside .container-fluid .product-container {
         width: 100%;
         border-collapse: collapse;
         margin-bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: stretch;
+        flex: 1;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row {
@@ -1095,106 +964,102 @@ footer {
         justify-content: space-between;
         border-bottom: 1px solid #ccc;
         padding: 10px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        height: 100px;
+        justify-content: center;
+        line-height: 50px;
+        margin-top: 30px;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-        flex-basis: 35%;
+    .banner-big .wraper aside .container-fluid {
+        font-size: 15px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell1 {
+        position: relative;
+        top: 15px;
+        font-size: 16px;
+        padding-right: 30px;
+        margin-left: 15px;
+        padding-bottom: 60px;
+        margin-top: 15px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
-        flex-basis: 20%;
-        display: flex;
-        font-size: 18px;
-        padding-left: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
+        flex-basis: 10%;
+        display: none;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .checkb_product {
+        position: relative;
+        left: 80px;
+        top: 30px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
-        flex-basis: 15%;
         text-align: right;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-        font-size: 19px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
+        flex-basis: 52%;
+    }
+
+    .product-cell1+.product-cell+.product-cell+.product-cell {
+        padding-left: 15px;
+    }
+
+    .checkb_product+.img-cell+.product-cell-name+.product-cell+.product-cell+.product-quantity+.product-cell {
+        position: relative;
+        top: 15px;
+    }
+
+    .checkb_product+.img-cell+.product-cell-name+.product-cell+.product-cell+.product-quantity+.product-cell+.button-xoa {
+        position: relative;
+        top: 15px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-        width: 100px;
-        height: 80px;
         position: relative;
         left: auto;
-        top: auto;
+        top: 0;
+        margin-top: 0;
         margin: 0;
         padding: 0;
+        width: 50px;
+        height: 50px;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row:last-of-type {
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
+        position: relative;
+        right: 50px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity .button-cong,
+    .button-tru {
+        border: none;
+        outline: none;
+        width: 25px;
+        height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    /* phương thức thanh toán */
-    .banner-big .wraper aside .container-fluid .tab-pane-payment {
-        gap: 20px;
-        display: flex;
-        align-items: center;
+    /*  */
+    .shopping-cart-container .selecall {
+        position: absolute;
+        font-size: 15px;
     }
 
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button {
-        color: black;
-        border-radius: 5px;
-        border: 1px solid rgb(134, 134, 134);
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment {
-        text-align: right;
-        line-height: 40px;
-        font-size: 17px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
-        margin-right: 40px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
-        padding-right: 45px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-        padding-right: 89px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
-        font-size: 25px;
-        font-weight: bold;
-        color: rgb(219, 0, 0);
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
+    .banner-big .wraper aside .shopping-cart-container .payment-container .btn-thanhtoan {
         margin-right: 25px;
         padding-left: 20px;
         padding-right: 20px;
-        width: 200px;
+        width: 170px;
         height: 40px;
     }
-
 }
 
 /* end responsive cho thiết bị di động */
@@ -1305,208 +1170,69 @@ footer {
         padding: 30px;
     }
 
-    .banner-big .wraper aside .container-fluid {
+    /*  */
+    /* search */
+    .container-fluid .search-box {
         position: relative;
-        background: var(--bgtoggle-color);
-        border-radius: 10px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card {
         display: flex;
+        justify-content: end;
+        align-items: center;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .address-card .name,
-    .phone {
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .text-location {
-        text-decoration: none;
+    .container-fluid .search-box .search {
         width: 200px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location label {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content {
-        background-color: var(--iframe-color);
-        margin: 10% auto;
-        padding: 30px;
-        border: 1px solid #888;
-        max-width: 600px;
-        z-index: 9999;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-        padding: 7px;
-        border: none;
-        color: #101010;
-        float: left;
-        border-radius: 5px;
-        background: rgb(231, 231, 231);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-        background: rgb(240, 240, 240);
-    }
-
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-        padding: 7px;
-        border: none;
-        color: #ffffff;
-        float: right;
-        background: rgb(205, 9, 9);
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-        background: rgb(223, 17, 17);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-        background: none;
-        color: black;
-        border: 1px solid rgb(190, 190, 190);
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    /* sản phẩm cần thanh toán */
-
-    .banner-big .wraper aside .container-fluid .product-container {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #ccc;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-        flex-basis: 37%;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
-        flex-basis: 20%;
-        display: flex;
-        font-size: 18px;
-        padding-left: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
-        flex-basis: 15%;
-        text-align: right;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-        font-size: 19px;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-        width: 100px;
-        height: 80px;
-        position: relative;
-        left: auto;
-        margin: 0;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row:last-of-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* phương thức thanh toán */
-    .banner-big .wraper aside .container-fluid .tab-pane-payment {
-        gap: 20px;
-        display: flex;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button {
-        border: 1px solid rgb(134, 134, 134);
-        color: black;
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment {
-        text-align: right;
-        line-height: 40px;
-        font-size: 17px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
+        height: 35px;
         margin-right: 40px;
     }
 
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
-        padding-right: 45px;
+    .container-fluid .search-box .icon-search {
+        position: absolute;
+        width: 40px;
+        height: 35px;
+        margin-right: 10px;
     }
 
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-        padding-right: 89px;
+    /* end */
+
+    .banner-big .wraper aside .container-fluid {
+        font-size: 15px;
     }
 
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
-        font-size: 25px;
-        font-weight: bold;
-        color: rgb(219, 0, 0);
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell1 {
+        font-size: 16px;
+        padding-right: 30px;
+        margin-left: 15px;
     }
 
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
-        margin-right: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 200px;
-        height: 40px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
+        flex-basis: 10%;
+        display: none;
     }
 
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
+        text-align: right;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
+        flex-basis: 52%;
+    }
+
+    .product-cell1+.product-cell+.product-cell+.product-cell {
+        padding-left: 15px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
+        position: relative;
+        left: auto;
+        margin-top: 0;
+        width: 60px;
+        height: 60px;
+    }
+
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
+        position: relative;
+        right: 50px;
+    }
 
 }
 
@@ -1595,205 +1321,40 @@ footer {
         padding: 30px;
     }
 
+    /*  */
+
     .banner-big .wraper aside .container-fluid {
-        position: relative;
-        background: var(--bgtoggle-color);
-        border-radius: 10px;
+        font-size: 15px;
     }
 
-    .banner-big .wraper aside .container-fluid .address-section .address-card {
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card .name,
-    .phone {
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .text-location {
-        text-decoration: none;
-        width: 200px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location label {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content {
-        background-color: var(--iframe-color);
-        margin: 10% auto;
-        padding: 30px;
-        border: 1px solid #888;
-        max-width: 600px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-        padding: 7px;
-        border: none;
-        color: #101010;
-        float: left;
-        border-radius: 5px;
-        background: rgb(231, 231, 231);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-        background: rgb(240, 240, 240);
-    }
-
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-        padding: 7px;
-        border: none;
-        color: #ffffff;
-        float: right;
-        background: rgb(205, 9, 9);
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-        background: rgb(223, 17, 17);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-        background: none;
-        color: black;
-        border: 1px solid rgb(190, 190, 190);
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    /* sản phẩm cần thanh toán */
-
-    .banner-big .wraper aside .container-fluid .product-container {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #ccc;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-        flex-basis: 30%;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell1 {
+        font-size: 16px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
-        flex-basis: 20%;
-        display: flex;
-        font-size: 18px;
-        padding-left: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
+        flex-basis: 10%;
+        padding-right: 100px;
+        font-size: 16px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
-        flex-basis: 15%;
+        flex-basis: 10%;
         text-align: right;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-        font-size: 19px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
+        flex-basis: 60%;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-        width: 100px;
-        height: 80px;
         position: relative;
         left: auto;
-        margin: 0;
+        margin-top: 0;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row:last-of-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* phương thức thanh toán */
-    .banner-big .wraper aside .container-fluid .tab-pane-payment {
-        gap: 20px;
-        display: flex;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button {
-        border: 1px solid rgb(134, 134, 134);
-        color: black;
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment {
-        text-align: right;
-        line-height: 40px;
-        font-size: 17px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
-        margin-right: 40px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
-        padding-right: 45px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-        padding-right: 89px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
-        font-size: 25px;
-        font-weight: bold;
-        color: rgb(219, 0, 0);
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
-        margin-right: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 200px;
-        height: 40px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
+        position: relative;
+        right: 50px;
     }
 
 }
@@ -1903,214 +1464,25 @@ footer {
 
     /*  */
 
-    .banner-big .wraper aside .tttk {
-        font-size: 22px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .banner-big .wraper aside {
-        padding: 30px;
-    }
-
-    .banner-big .wraper aside .container-fluid {
-        position: relative;
-        background: var(--bgtoggle-color);
-        border-radius: 10px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card {
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .address-card .name,
-    .phone {
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .text-location {
-        text-decoration: none;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
-        display: flex;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .location label {
-        display: inline-block;
-        vertical-align: middle;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content {
-        background-color: var(--iframe-color);
-        margin: 10% auto;
-        padding: 30px;
-        border: 1px solid #888;
-        max-width: 600px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close {
-        padding: 7px;
-        border: none;
-        color: #101010;
-        float: left;
-        border-radius: 5px;
-        background: rgb(231, 231, 231);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .close:hover {
-        background: rgb(240, 240, 240);
-    }
-
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh {
-        padding: 7px;
-        border: none;
-        color: #ffffff;
-        float: right;
-        background: rgb(205, 9, 9);
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content .hoanthanh:hover {
-        background: rgb(223, 17, 17);
-    }
-
-    .banner-big .wraper aside .container-fluid .address-section .modal-content form .form-control {
-        background: none;
-        color: black;
-        border: 1px solid rgb(190, 190, 190);
-        outline: none !important;
-        box-shadow: none !important;
-    }
-
-    /* sản phẩm cần thanh toán */
-
-    .banner-big .wraper aside .container-fluid .product-container {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #ccc;
-        padding: 10px;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell {
-        flex-basis: 30%;
-    }
-
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell-name {
-        flex-basis: 20%;
-        display: flex;
-        font-size: 18px;
-        padding-left: 10px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        content: '...';
+        flex-basis: 10%;
+        padding-right: 230px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:last-of-type {
-        flex-basis: 15%;
+        flex-basis: 11%;
         text-align: right;
-    }
-
-    .banner-big .wraper aside .container-fluid .product-container .product-row .product-cell:first-of-type {
-        font-size: 19px;
     }
 
     .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-        width: 100px;
-        height: 80px;
         position: relative;
         left: auto;
-        margin: 0;
+        margin-top: 0;
     }
 
-    .banner-big .wraper aside .container-fluid .product-container .product-row:last-of-type {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* phương thức thanh toán */
-    .banner-big .wraper aside .container-fluid .tab-pane-payment {
-        gap: 20px;
-        display: flex;
-        align-items: center;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button {
-        border: 1px solid rgb(134, 134, 134);
-        color: black;
-        border-radius: 5px;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button.active {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:hover,
-    .banner-big .wraper aside .container-fluid .tab-pane-payment button:focus-within {
-        background: rgb(228, 52, 52);
-        color: white;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment {
-        text-align: right;
-        line-height: 40px;
-        font-size: 17px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment {
-        margin-right: 40px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment:first-of-type {
-        padding-right: 45px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .text-payment1 {
-        padding-right: 89px;
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .price-payment-sum {
-        font-size: 25px;
-        font-weight: bold;
-        color: rgb(219, 0, 0);
-    }
-
-    .banner-big .wraper aside .container-fluid .container-fluid-payment .tbtn-thanhtoan {
-        margin-right: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
-        width: 200px;
-        height: 40px;
+    .banner-big .wraper aside .container-fluid .product-container .product-row .product-quantity {
+        position: relative;
+        right: 60px;
     }
 
 }

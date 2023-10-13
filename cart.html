@@ -20,7 +20,7 @@
 
 <!----===== Boxicons CSS ===== -->
 <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-<link rel="stylesheet" href="assets/css_main/payment_method.css">
+<link rel="stylesheet" href="assets/css_main/cart.css">
 
 <body>
     <div class="containerr ">
@@ -73,151 +73,87 @@
                     </div>
                     <div class="wraper">
                         <aside class="">
-                            <div class="container-fluid py-4 mt-3">
-                                <span class="tttk text-uppercase px-2">Thanh Toán</span>
-                                <div class="address-section mt-4 px-2">
-                                    <h4 class="mb-3 text-danger"><i class="bi bi-geo-alt-fill"></i> Địa chỉ giao hàng
-                                    </h4>
-                                    <div class="address-card">
-                                        <div class="name px-2">
-                                            <label for="address1">Lê Chí Bằng </label>
-                                        </div>
-                                        <div class="phone">
-                                            <label for="address2"> (+84)<span> 943925652</span></label>
-                                        </div>
-
-                                        <div class="location px-5">
-                                            <label for="address3">Ấp Rạch Muỗi Xã Phú Hưng Huyện Cái Nước Tỉnh Cà
-                                                Mau</label>
-                                        </div>
-                                        <a href="#" id="openModal"
-                                            class=" add-new-address px-3 text-location d-flex justify-content-end">
-                                            Thay Đổi
-                                        </a>
-
-                                        <!-- Màng hình hiển thị -->
-                                        <div id="myModal" class="modal">
-                                            <div class="modal-content">
-                                                <h4>Địa Chỉ Mới</h4>
-                                                <form action="/payment_method.html">
-                                                    <div class="row py-2">
-                                                        <div class="col-md-6 py-2">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" value=""
-                                                                    placeholder="Họ Và Tên">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6 py-2">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" value=""
-                                                                    placeholder="Số Điện Thoại">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-12 py-2">
-                                                            <div class="form-group">
-                                                                <input class="form-control" type="text" value=""
-                                                                    placeholder="Tỉnh/Thành Phố, Quận/Huyện...">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-12 py-2">
-                                                            <div class="form-group">
-                                                                <textarea class="form-control" type="text" value=""
-                                                                    placeholder="Địa Chỉ Cụ Thể" rows="3"
-                                                                    style="vertical-align: top;">
-                                                                </textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Các trường thông tin khác -->
-                                                    <button class="close px-4">Trở Lại</button>
-                                                    <button type="submit" class="hoanthanh px-4">Hoàn Thành</button>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="container-fluid text-cart py-4 mt-3 ">
+                                <span class="tttk text-uppercase px-3">Giỏ Hàng</span>
+                                <br>
+                                <span class="px-3 mt-3 position-absolute text-giohang">Bạn có 4 sản phẩm trong giỏ hàng</span>
+                                <div class="search-box">
+                                    <button type="submit" class="icon-search">
+                                        <i class="bi bi-search "></i>
+                                    </button>
+                                    <input type="search" class="search px-3" name="search" id="timkiem">
                                 </div>
                             </div>
                             <div class="container-fluid py-4 mt-3">
                                 <div class="product-container">
-                                    <div class="product-row header">
-                                        <div class="product-cell">Sản phẩm</div>
-                                        <div class="product-cell">Size</div>
+                                    <div class="product-row header mb-4">
+                                        <div class="product-cell1">Sản phẩm</div>
                                         <div class="product-cell">Đơn giá</div>
                                         <div class="product-cell">Số lượng</div>
-                                        <div class="product-cell">Thành tiền</div>
+                                        <div class="product-cell">Số tiền</div>
+                                        <div class="product-cell">Thao Tác</div>
                                     </div>
-
                                     <div class="product-row">
+                                        <input type="checkbox" class="checkb_product custom-checkbox">
                                         <img src="/assets/images/bglogin.jpg" class="img-cell" alt="prod_pm">
                                         <div class="product-cell-name">Tên sản phẩm</div>
                                         <div class="product-cell px-2">:M</div>
                                         <div class="product-cell">100.000₫</div>
-                                        <div class="product-cell px-5">2</div>
+                                        <div class="product-quantity px-5">
+                                            <button class="button-tru">-</button>
+                                            <input type="text" value="1">
+                                            <button class="button-cong">+</button>
+                                        </div>
                                         <div class="product-cell">200.000₫</div>
+                                        <div class="button-xoa">
+                                            <button type="button" class="btn">Xóa</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="product-container">
-                                    <div class="product-row header">
-                                        <div class="product-cell">Sản phẩm</div>
-                                        <div class="product-cell">Size</div>
+                                    <div class="product-row header mb-4">
+                                        <div class="product-cell1">Sản phẩm</div>
                                         <div class="product-cell">Đơn giá</div>
                                         <div class="product-cell">Số lượng</div>
-                                        <div class="product-cell">Thành tiền</div>
+                                        <div class="product-cell">Số tiền</div>
+                                        <div class="product-cell">Thao Tác</div>
                                     </div>
-
                                     <div class="product-row">
+                                        <input type="checkbox" class="checkb_product custom-checkbox">
                                         <img src="/assets/images/bglogin.jpg" class="img-cell" alt="prod_pm">
                                         <div class="product-cell-name">Tên sản phẩm</div>
                                         <div class="product-cell px-2">:M</div>
                                         <div class="product-cell">100.000₫</div>
-                                        <div class="product-cell px-5">2</div>
+                                        <div class="product-quantity px-5">
+                                            <button class="button-tru">-</button>
+                                            <input type="text" value="1">
+                                            <button class="button-cong">+</button>
+                                        </div>
                                         <div class="product-cell">200.000₫</div>
+                                        <div class="button-xoa">
+                                            <button type="button" class="btn">Xóa</button>
+                                        </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div class="shopping-cart-container mt-3 py-3 px-3">
+                                <div class="payment-container">
+                                    <span class="text-payment">Tổng Thanh Toán: </span>
+                                    <span class="px-4 price-payment-sum">1.000.000₫</span><br>
+                                    <label for="selecAll" class="selecall">
+                                        <span class="chk-all">
+                                            <input type="checkbox" id="selecAll"> Chọn Tất Cả()
+                                        </span>
+                                    </label>
+                                    <a href="/wait_confirmation.html">
+                                        <button class="btn btn-danger btn-thanhtoan mt-3" type="submit">Thanh
+                                            Toán</button>
+                                    </a>
+
                                 </div>
                             </div>
 
-                            <div class="container-fluid py-4 mt-3">
-                                <ul class="nav nav-tabs tab-pane-payment" id="myTab" role="tablist">
-                                    <span class="h5">Phương Thức Thanh Toán</span>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="tab"
-                                            data-bs-target="#pills-home" type="button" role="tab"
-                                            aria-controls="pills-home" aria-selected="true">Thanh Toán Khi Nhận Hàng
-                                        </button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-profile" type="button" role="tab"
-                                            aria-controls="pills-profile" aria-selected="false">Thanh Toán Online
-                                        </button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content mb-4" id="myTabContent">
-                                    <div class="tab-pane fade show active p-4" id="pills-home" role="tabpanel"
-                                        aria-labelledby="pills-home-tab" tabindex="0">Thanh Toán Khi Nhận Hàng:
-                                        &nbsp;&nbsp;&nbsp;
-                                        Phí thu hộ: ₫0 VNĐ. Ưu đãi về phí vận chuyển (nếu có) áp dụng cả với phí thu hộ.
-                                    </div>
-                                    <div class="tab-pane fade p-4" id="pills-profile" role="tabpanel"
-                                        aria-labelledby="pills-profile-tab" tabindex="0"><a href="#"
-                                            class="text-decoration-none text-dark">Thanh Toán
-                                            Online</a>
-                                    </div>
-                                </div>
-                                <div class="container-fluid-payment">
-                                    <span class="text-payment">Tổng Tiền Hàng: </span><span class="price-payment">
-                                        200.000₫</span><br>
-                                    <span class="text-payment1">Phí Vận Chuyển: </span><span class="price-payment">
-                                        30.000₫</span><br>
-                                    <span class="text-payment">Tổng Thanh Toán: </span><span class="price-payment-sum">
-                                        230.000₫</span><br>
-                                    <a href="/wait_confirmation.html">
-                                        <button class="btn btn-danger tbtn-thanhtoan mt-5" type="submit">Thanh
-                                            Toán</button>
-                                    </a>
-                                </div>
-                            </div>
                         </aside>
                     </div>
                 </header>
@@ -357,41 +293,14 @@
             });
         });
 
-        // Ẩn hiện iframe thay đổi địa chỉ nhận hàng
-
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("openModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        // nút mua hàng nằm phía trên màng hình
+        window.addEventListener('scroll', function () {
+            var paymentContainer = document.querySelector('.payment-container');
+            if (window.scrollY <= paymentContainer.offsetHeight + paymentContainer.offsetLeft) {
+                paymentContainer.classList.add('sticky');
+            } else {
+                paymentContainer.classList.remove('sticky');
             }
-        }
-        // end
-        // Lấy giá trị được nhập từ form thay đổi địa chỉ
-        document.querySelector('.hoanthanh').addEventListener('click', function (event) {
-            event.preventDefault();
-
-            var fullName = document.querySelector('input[placeholder="Họ Và Tên"]').value;
-            var phoneNumber = document.querySelector('input[placeholder="Số Điện Thoại"]').value;
-            var address = document.querySelector('input[placeholder="Tỉnh/Thành Phố, Quận/Huyện..."]').value;
-
-            document.querySelector('label[for="address1"]').textContent = fullName;
-            document.querySelector('label[for="address2"]').textContent = "(+84) " + phoneNumber;
-            document.querySelector('label[for="address3"]').textContent = address;
-
-            // Đóng modal
-            var modal = document.getElementById('myModal');
-            modal.style.display = "none";
         });
 
         // end
