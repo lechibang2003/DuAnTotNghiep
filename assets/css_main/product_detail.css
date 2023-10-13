@@ -1,0 +1,1377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--bgtoggle-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: rgba(255, 255, 255, 0.5);
+    --bgtoggle-color: rgba(255, 255, 255, 0.3);
+    --bgthree-color: rgba(197, 197, 197, 0.5);
+    --button-color: rgb(219, 2, 2);
+    --sidebar-color: #0d1116;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #0d1116;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+
+.containerr {
+    position: relative;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 100%;
+}
+
+/* .containerr .image-big{
+    background-color: var(--body-color);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+} */
+
+.containerr .image-one {
+    background-image: url(/assets/images/background.jpg);
+    filter: blur(20px);
+    background-size: 100% 1000px;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 102.5%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+
+}
+
+.containerr .image-two {
+    background-color: var(--body-color);
+    /* Màu nền với độ mờ 50% */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 70px;
+    left: 5%;
+    bottom: 8%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+}
+
+
+/* sp1 */
+.containerr .image-four {
+    background-color: var(--body-color);
+    /* Màu nền với độ mờ 50% */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 0;
+    left: 5%;
+    bottom: 8%;
+    width: 90%;
+    height: auto;
+    margin-top: 70px;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* image five */
+.containerr #menu-food {
+    background-color: var(--body-color);
+    /* Màu nền với độ mờ 50% */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+/* */
+
+.containerr .myimage {
+    position: absolute;
+    left: 75%;
+    top: 14%;
+    /* transform: rotate(-45deg); */
+    width: 25%;
+    z-index: 1;
+}
+
+.containerr .myimagefood5 {
+    position: absolute;
+    top: 2700px;
+    left: -20px;
+    width: 23%;
+    z-index: 1;
+}
+
+.containerr .image-two .yum-logo {
+    position: absolute;
+    width: 150px;
+    height: auto;
+    top: 7%;
+    left: 5%;
+    z-index: 1;
+}
+
+.containerr .image-two .collapse .navbar-nav {
+    position: absolute;
+    top: 9%;
+    left: 30%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.containerr .image-two .navb .collapse .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(150, 2, 2);
+}
+
+.containerr .image-two .collapse .navbar-nav li a {
+    width: 100px;
+    color: black;
+    font-size: 1.2rem;
+    z-index: 1;
+    display: inline-block;
+
+}
+
+/* Thiết lập cho logo ra giữa trên thiết bị di động */
+.navbar-brand {
+    order: 1;
+    margin-right: 0 !important;
+}
+
+/* Thiết lập cho nút toggle */
+.navbar-toggler {
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    order: 1;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    background: var(--bgtoggle-color);
+}
+
+/* Thêm hiệu ứng transition cho thanh navbar */
+.navb .navbar-collapse {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/* button Đăng nhập */
+.navb .btn-sign {
+    position: absolute;
+    right: 10%;
+    top: 9%;
+    width: 100px;
+    height: 40px;
+    background: var(--button-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 40px;
+}
+
+.navb .btn-sign:hover {
+    background-color: rgb(209, 8, 8);
+}
+
+.navb a {
+    text-decoration: none;
+    color: white;
+}
+
+/* button Giỏ hàng */
+
+.navb .btn-cart {
+    position: absolute;
+    right: 21%;
+    top: 9%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 40px;
+    color: black;
+    font-size: 18px;
+}
+
+.btn-cart {
+    transition: transform 0.3s ease;
+}
+
+.btn-cart:hover {
+    transform: scale(1.1);
+}
+
+/* mix-blend-mode: lighten; */
+
+.containerr .food2 {
+    position: absolute;
+    width: 13%;
+    top: -5%;
+    left: -2%;
+}
+
+
+/* header */
+.image-two header aside #ttsanpham {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    padding: 20px;
+}
+
+.image-two header aside #ttsanpham .container .title {
+    font-weight: bold;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image-two header aside #ttsanpham .container .danhgia .star {
+    font-size: 18px;
+    color: rgb(1, 144, 1);
+}
+
+.image-two header aside #ttsanpham .container .size .sosize {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+}
+
+.image-two header aside #ttsanpham .container .size .sosize:focus-within {
+    background: white;
+    box-shadow: inset 2px 2px 5px 0 rgb(131, 131, 131);
+}
+
+.image-two header aside #ttsanpham .container .gia .price {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(1, 144, 1);
+}
+
+.image-two header aside #ttsanpham .container .soluong .EquXA8 {
+    width: 60px;
+    height: 30px;
+    border: none;
+    text-align: center;
+}
+
+.image-two header aside #ttsanpham .container .soluong .tru {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.image-two header aside #ttsanpham .container .soluong .cong {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.image-two header aside #ttsanpham .container .cart-buy-item .button-cart {
+    border: none;
+    justify-content: center;
+    padding: 15px;
+    width: 210px;
+    border-radius: 3px;
+    border: 1px solid green;
+    background: rgb(220, 255, 220);
+    color: green;
+}
+
+.image-two header aside #ttsanpham .container .cart-buy-item .button-cart:hover {
+    background: rgb(233, 249, 233);
+}
+
+.image-two header aside #ttsanpham .container .cart-buy-item .button-buy {
+    border: none;
+    justify-content: center;
+    padding: 15px;
+    width: 150px;
+    border-radius: 3px;
+    background: rgb(1, 144, 1);
+    color: rgb(255, 255, 255);
+}
+
+.image-two header aside #ttsanpham .container .cart-buy-item .button-buy:hover {
+    background: rgb(0, 158, 0);
+}
+
+
+.image-two header article iframe {
+    position: absolute;
+    top: -130px;
+    left: 220px;
+    margin-top: 190px;
+    width: 40%;
+    height: 100%;
+    filter: drop-shadow(15px 12px 10px rgba(46, 46, 46, 0.7));
+    object-fit: contain;
+}
+
+.image-two header article .ifarm-images img {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    border: 1px solid rgb(183, 183, 183);
+    background: var(--bgtoggle-color);
+    border-radius: 10px;
+    display: flex;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+
+.image-two header {
+    /* overflow: hidden; */
+    position: relative;
+    top: -200px;
+    left: 0;
+    margin-top: 400px;
+    padding-bottom: 80px;
+    padding-top: 20px;
+    width: 90%;
+    height: auto;
+    background: var(--bgtoggle-color);
+    z-index: 0;
+    border-radius: 60px;
+    border: 2px solid white;
+}
+
+/* end */
+
+/* mota */
+
+.image-four .wraper1 {
+    position: relative;
+    top: -130px;
+    left: 5%;
+    background: var(--bgtoggle-color);
+    width: 90%;
+    height: auto;
+    padding: 50px;
+    z-index: 1;
+    border-radius: 60px;
+    border: 2px solid white;
+}
+
+.image-four .container p {
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.image-four .container .collapse span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.image-four .container .xemthem {
+    background: white;
+    opacity: 0.8;
+    cursor: pointer;
+    width: 90px;
+    height: 35px;
+    padding-top: 5px;
+    border-radius: 60px;
+    border: 1px solid rgb(145, 145, 145);
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    bottom: -15px;
+    left: 45%;
+}
+
+.image-four .container .xemthem span {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.wraper1 .carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding-right: 300px;
+    border-radius: 20px;
+}
+
+/* .image-two .banner-big  */
+
+
+header .girdd {
+    display: flex;
+    flex-direction: center;
+    justify-content: left;
+    align-items: center;
+    margin-top: 35px;
+    gap: 50px;
+}
+
+footer {
+    position: relative;
+    top: 0;
+    z-index: -1;
+    background: var(--body-color);
+    margin-left: 5%;
+    width: 90%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+/* end */
+
+/* top-home */
+/* nút bấm quay về đầu trang */
+.containerr .top-home i {
+    position: relative;
+    bottom: 5%;
+    right: 3%;
+    font-size: 2.5em;
+    position: fixed;
+    color: white;
+    z-index: 9999;
+}
+
+.containerr .top-home {
+    scroll-behavior: smooth;
+}
+
+/* responsive */
+@media only screen and (min-width: 375px) and (max-width: 575.5px) {
+
+    /* CSS règles cho thiết bị tablet */
+    .containerr .image-two {
+        position: relative;
+        top: 70px;
+        left: 5%;
+        bottom: 8%;
+        width: 90%;
+        height: auto;
+        display: flex;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 7.5%;
+    }
+
+    .navb .btn-sign {
+        position: absolute;
+        right: 18%;
+        top: 7.5%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 7%;
+        left: 25%;
+        display: flex;
+        gap: 10%;
+        background-color: rgb(211, 211, 211);
+        padding: 30px 30px;
+        width: 200px;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+
+    .navb .btn-cart {
+        position: absolute;
+        right: 48%;
+        top: 7.5%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .containerr .image-two .yum-logo {
+        position: absolute;
+        width: 100px;
+        height: auto;
+        top: 7%;
+        left: 5%;
+    }
+
+    /* end navbar */
+
+    /* banner */
+    .image-two header article {
+        position: absolute;
+        left: 10%;
+        top: 20%;
+        font-size: 0;
+    }
+
+    .image-two header article p {
+        font-size: 1.6rem;
+    }
+
+    .image-two header article a img {
+        width: 45px;
+        height: 45px;
+        padding: 2px;
+        margin-left: -10px;
+    }
+
+    .image-two header article a button {
+        margin-top: 40px;
+        width: 180px;
+        height: 45px;
+    }
+
+    .image-two header aside img {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 250px;
+        width: 100%;
+        height: auto;
+        padding-top: 220px;
+        padding-bottom: 20px;
+    }
+
+    /* end banner */
+
+    /* header */
+
+    .image-two header {
+        overflow: hidden;
+        position: relative;
+        top: -200px;
+        left: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-two header aside #ttsanpham {
+        position: relative;
+        margin-top: 430px;
+        margin-bottom: -30px;
+        top: 0;
+        left: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .image-two header aside #ttsanpham .container .title {
+        font-size: 23px;
+    }
+
+    .image-two header aside #ttsanpham .container .danhgia .star {
+        font-size: 14px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize {
+        padding: 8px 14px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize:focus-within {
+        background: white;
+    }
+
+    .image-two header aside #ttsanpham .container .gia .price {
+        font-size: 18px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .EquXA8 {
+        width: 60px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .tru {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .cong {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-cart {
+        width: 130px;
+        font-size: 11px;
+        margin-left: -10px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-buy {
+        width: 90px;
+        font-size: 11px;
+    }
+
+    .image-two header article iframe {
+        position: absolute;
+        top: -370px;
+        left: -35px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .image-two header article .ifarm-images img {
+        position: relative;
+        top: 130px;
+        left: 3px;
+        margin-right: 0;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        display: inline-flex;
+    }
+
+
+    .wraper1 #carouselExampleDark {
+        display: none;
+    }
+
+    /* .image-two header aside #ttsanpham .container .cart-buy-item {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgtoggle-color);
+        padding: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        text-align: center;
+        z-index: 1;
+        display: block;
+    } */
+
+    /* .image-two header aside #ttsanpham .container .cart-buy-item {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgtoggle-color);
+        padding: 20px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        text-align: center;
+        z-index: 1;
+        display: block;
+    }
+
+    .containerr .image-four {
+        position: none;
+        top: 0;
+        left: 5%;
+        bottom: 8%;
+        width: 90%;
+        height: auto;
+        margin-top: 70px;
+    }
+
+    .image-four .wraper1 {
+        position: relative;
+        top: -130px;
+        left: 5%;
+        background: var(--bgtoggle-color);
+        width: 90%;
+        height: auto;
+        padding: 50px;
+        z-index: -1;
+        border-radius: 60px;
+        border: 2px solid white;
+    } */
+
+}
+
+@media only screen and (min-width: 576px) and (max-width: 766.5px) {
+
+    /* CSS règles cho thiết bị máy tính bảng hoặc chiều dọc điện thoại */
+    .containerr .image-two {
+        position: relative;
+        top: 70px;
+        left: 5%;
+        bottom: 8%;
+        width: 90%;
+        height: auto;
+        display: flex;
+    }
+
+    .navb .btn-sign {
+        position: absolute;
+        right: 18%;
+        top: 8%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 8%;
+        left: 45%;
+        display: flex;
+        gap: 10%;
+        background-color: rgb(211, 211, 211);
+        padding: 30px 30px;
+        width: 200px;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+
+    .navb .btn-cart {
+        position: absolute;
+        right: 42%;
+        top: 8%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .containerr .image-two .yum-logo {
+        position: absolute;
+        width: 130px;
+        height: auto;
+        top: 7%;
+        left: 5%;
+    }
+
+    /* end navbar */
+
+    /* banner */
+    .image-two header article {
+        position: absolute;
+        left: 18%;
+        top: 20%;
+        font-size: 0;
+    }
+
+    .image-two header article p {
+        font-size: 2.1rem;
+    }
+
+    .image-two header article a img {
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+    }
+
+    .image-two header article a button {
+        margin-top: 40px;
+        width: 200px;
+        height: 50px;
+    }
+
+    .image-two header aside img {
+        position: relative;
+        top: 60px;
+        left: -8%;
+        margin-top: 250px;
+        width: 120%;
+        height: auto;
+        padding-top: 250px;
+        padding-bottom: 80px;
+    }
+
+    /* end banner */
+
+    /* header */
+
+    .image-two header {
+        overflow: hidden;
+        position: relative;
+        top: -200px;
+        left: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-two header aside #ttsanpham {
+        position: relative;
+        margin-top: 500px;
+        top: 0;
+        left: 5%;
+        text-align: center;
+    }
+
+    .image-two header aside #ttsanpham .container .title {
+        font-size: 26px;
+    }
+
+    .image-two header aside #ttsanpham .container .danhgia .star {
+        font-size: 18px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize {
+        padding: 8px 14px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize:focus-within {
+        background: white;
+    }
+
+    .image-two header aside #ttsanpham .container .gia .price {
+        font-size: 24px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .EquXA8 {
+        width: 60px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .tru {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .cong {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-cart {
+        width: 220px;
+        margin-left: -30px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-buy {
+        width: 180px;
+        margin-left: 10px;
+    }
+
+    .image-two header article iframe {
+        position: absolute;
+        top: -320px;
+        left: 20px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-two header article .ifarm-images img {
+        position: relative;
+        top: 200px;
+        left: -10px;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+    }
+
+
+}
+
+/* end responsive cho thiết bị di động */
+
+
+
+/* Định nghĩa kích thước responsive cho máy tính bảng */
+@media screen and (min-width: 767px) and (max-width: 992.5px) {
+
+    /* CSS règles cho máy tính bảng */
+    /* navbar */
+    .navb .btn-sign {
+        position: absolute;
+        right: 15%;
+        top: 8%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 8%;
+        left: 58%;
+        display: flex;
+        gap: 10%;
+        background-color: rgb(211, 211, 211);
+        padding: 20px 10px;
+        width: 200px;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+
+    .navb .btn-cart {
+        position: absolute;
+        right: 30%;
+        top: 8%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .containerr .image-two .yum-logo {
+        position: absolute;
+        width: 130px;
+        height: auto;
+        top: 7%;
+        left: 5%;
+    }
+
+    /* end navbar */
+
+    /* banner */
+    .image-two header article {
+        position: absolute;
+        left: 9%;
+        top: 38%;
+        font-size: 2.5em;
+    }
+
+    .image-two header article p {
+        font-size: 1.8rem;
+    }
+
+    .image-two header article a img {
+        width: 40px;
+        height: 40px;
+        padding: 2px;
+        margin-right: -15px;
+    }
+
+    .image-two header article a button {
+        margin-top: 40px;
+        width: 170px;
+        height: 45px;
+    }
+
+    .image-two header aside img {
+        position: relative;
+        top: 0;
+        left: 60%;
+        margin-top: 170px;
+        width: 100%;
+        height: auto;
+    }
+
+    /* end banner */
+
+    /* header */
+
+    .image-two header {
+        overflow: hidden;
+        position: relative;
+        top: -200px;
+        left: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-two header aside #ttsanpham {
+        position: relative;
+        margin-top: 350px;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .image-two header aside #ttsanpham .container .title {
+        font-size: 26px;
+    }
+
+    .image-two header aside #ttsanpham .container .danhgia .star {
+        font-size: 18px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize {
+        padding: 8px 14px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize:focus-within {
+        background: white;
+    }
+
+    .image-two header aside #ttsanpham .container .gia .price {
+        font-size: 24px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .EquXA8 {
+        width: 60px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .tru {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .cong {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-cart {
+        width: 220px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-buy {
+        width: 180px;
+    }
+
+    .image-two header article iframe {
+        position: absolute;
+        top: -460px;
+        left: 220px;
+        width: 400px;
+        height: 100%;
+    }
+
+    .image-two header article .ifarm-images img {
+        position: relative;
+        top: -300px;
+        left: 30px;
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+/* end responsive cho máy tính bảng */
+
+
+
+/* Định nghĩa kích thước responsive cho màn hình máy tính và laptop */
+@media screen and (min-width: 993px) and (max-width: 1199.5px) {
+    /* CSS règles cho màn hình máy tính và laptop */
+
+    /* navbar */
+    .navb .btn-sign {
+        position: absolute;
+        right: 4%;
+        top: 9%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 9%;
+        left: 30%;
+        gap: 7%;
+    }
+
+    .navb .btn-cart {
+        position: absolute;
+        right: 17%;
+        top: 9%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* end navbar */
+
+    /* banner */
+    .image-two header article p {
+        font-size: 2.2rem;
+    }
+
+    .image-two header article a img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .image-two header article a button {
+        margin-top: 50px;
+        width: 200px;
+        height: 45px;
+    }
+
+    .image-two header aside img {
+        position: relative;
+        top: 0;
+        left: 75%;
+        margin-top: 180px;
+        width: 110%;
+        height: auto;
+    }
+
+    /* end banner */
+
+    /* header */
+
+    .image-two header {
+        overflow: hidden;
+        position: relative;
+        top: -200px;
+        left: 0;
+        width: 90%;
+        height: auto;
+    }
+
+    .image-two header aside #ttsanpham {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        text-align: center;
+    }
+
+    .image-two header aside #ttsanpham .container .title {
+        font-size: 26px;
+    }
+
+    .image-two header aside #ttsanpham .container .danhgia .star {
+        font-size: 18px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize {
+        padding: 8px 14px;
+    }
+
+    .image-two header aside #ttsanpham .container .size .sosize:focus-within {
+        background: white;
+    }
+
+    .image-two header aside #ttsanpham .container .gia .price {
+        font-size: 24px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .EquXA8 {
+        width: 60px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .tru {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .soluong .cong {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-cart {
+        width: 170px;
+    }
+
+    .image-two header aside #ttsanpham .container .cart-buy-item .button-buy {
+        width: 120px;
+    }
+
+    .image-two header article iframe {
+        position: absolute;
+        top: -130px;
+        left: 120px;
+        width: 40%;
+        height: 100%;
+    }
+
+    .image-two header article .ifarm-images img {
+        position: relative;
+        top: 30px;
+        left: 0;
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+/* end responsive cho màn hình máy tính và laptop */
+
+
+
+@media screen and (min-width: 1200px) and (max-width: 1286px) {
+    .navb .btn-sign {
+        position: absolute;
+        right: 10%;
+        top: 9%;
+        width: 100px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 9%;
+        left: 30%;
+        gap: 10%;
+    }
+
+    .navb .btn-cart {
+        position: absolute;
+        right: 21%;
+        top: 9%;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .image-two header article p {
+        font-size: 2.5rem;
+    }
+
+    .image-two header article a img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .image-two header article a button {
+        margin-top: 50px;
+        width: 220px;
+        height: 50px;
+    }
+
+    .image-two header aside img {
+        position: relative;
+        top: 0;
+        left: 72%;
+        margin-top: 180px;
+        width: 130%;
+        height: auto;
+    }
+
+    .containerr .food2 {
+        position: absolute;
+        width: 13%;
+        top: -5%;
+        left: -2%;
+    }
+
+    .containerr .myimage {
+        position: absolute;
+        left: 75%;
+        top: 14%;
+        width: 25%;
+    }
+
+    .containerr .myimagefood5 {
+        position: absolute;
+        top: 2700px;
+        left: -20px;
+        width: 23%;
+    }
+
+    .containerr .image-two .yum-logo {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        top: 7%;
+        left: 5%;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        top: 9%;
+        right: 5%;
+        order: 1;
+        width: 40px;
+        height: 40px;
+    }
+
+    .containerr .image-two .collapse .navbar-nav {
+        position: absolute;
+        top: 9%;
+        left: 30%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        gap: 10%;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    /*  */
+
+    .image-two header aside #ttsanpham {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .image-two header article iframe {
+        position: absolute;
+        top: -130px;
+        left: 180px;
+        width: 40%;
+        height: 100%;
+    }
+
+    .image-two header article .ifarm-images img {
+        position: relative;
+        top: 30px;
+        left: 30px;
+        width: 80px;
+        height: 80px;
+    }
+
+}
