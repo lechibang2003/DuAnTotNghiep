@@ -488,6 +488,22 @@ footer {
     padding-bottom: 30px;
 }
 
+footer .ft .logo-footer {
+    width: 150px;
+    height: 100px;
+}
+
+footer .ft ul li a {
+    text-decoration: none;
+    line-height: 50px;
+
+}
+
+footer .ft ul li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 /* end */
 
 /* top-home */

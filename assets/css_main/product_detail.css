@@ -477,6 +477,26 @@ header .girdd {
     gap: 50px;
 }
 
+/* Đánh giá và bình luận */
+.image-four .wraper1 .container .reviews .card-header-comment ul {
+    gap: 20px;
+}
+
+.image-four .wraper1 .container .reviews .card-header-comment ul li button {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: rgb(95, 95, 95);
+}
+
+.image-four .wraper1 .container .reviews .card-header-comment ul li button.active {
+    background: var(--body-color);
+    border: 1px solid var(--button-color);
+    color: var(--button-color);
+}
+
+
+/* end */
+
 footer {
     position: relative;
     top: 0;
@@ -489,6 +509,23 @@ footer {
     padding-top: 80px;
     padding-bottom: 30px;
 }
+
+footer .ft .logo-footer {
+    width: 150px;
+    height: 100px;
+}
+
+footer .ft ul li a {
+    text-decoration: none;
+    line-height: 50px;
+
+}
+
+footer .ft ul li {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 
 /* end */
 
@@ -706,60 +743,36 @@ footer {
         display: none;
     }
 
-    /* .image-two header aside #ttsanpham .container .cart-buy-item {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--bgtoggle-color);
-        padding: 20px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        text-align: center;
-        z-index: 1;
-        display: block;
-    } */
-
-    /* .image-two header aside #ttsanpham .container .cart-buy-item {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background-color: var(--bgtoggle-color);
-        padding: 20px;
-        border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-        text-align: center;
-        z-index: 1;
-        display: block;
+    .image-four .container .xemthem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-28%, 0);
     }
 
-    .containerr .image-four {
-        position: none;
-        top: 0;
-        left: 5%;
-        bottom: 8%;
-        width: 90%;
-        height: auto;
-        margin-top: 70px;
+    /* bình luận và đánh giá */
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul li button {
+        font-size: 13.5px;
     }
 
-    .image-four .wraper1 {
-        position: relative;
-        top: -130px;
-        left: 5%;
-        background: var(--bgtoggle-color);
-        width: 90%;
-        height: auto;
-        padding: 50px;
-        z-index: -1;
-        border-radius: 60px;
-        border: 2px solid white;
-    } */
+    .image-four .wraper1 .container .reviews .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end */
 
 }
 
-@media only screen and (min-width: 576px) and (max-width: 766.5px) {
+@media screen and (min-width: 576px) and (max-width: 766.5px) {
 
     /* CSS règles cho thiết bị máy tính bảng hoặc chiều dọc điện thoại */
     .containerr .image-two {
@@ -936,6 +949,28 @@ footer {
         display: inline-flex;
     }
 
+    .image-four .container .xemthem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translate(-28%, 0);
+    }
+
+    /* bình luận và đánh giá */
+
+    .image-four .wraper1 .container .reviews .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end */
 
 }
 
@@ -1102,6 +1137,21 @@ footer {
         height: 80px;
     }
 
+    /* bình luận và đánh giá */
+
+    .image-four .wraper1 .container .reviews .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end */
 }
 
 /* end responsive cho máy tính bảng */
@@ -1243,6 +1293,21 @@ footer {
         height: 80px;
     }
 
+    /* bình luận và đánh giá */
+
+    .image-four .wraper1 .container .reviews .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end */
 }
 
 /* end responsive cho màn hình máy tính và laptop */
@@ -1374,4 +1439,19 @@ footer {
         height: 80px;
     }
 
+    /* bình luận và đánh giá */
+
+    .image-four .wraper1 .container .reviews .section-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-four .wraper1 .container .reviews .card-header-comment ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* end */
 }

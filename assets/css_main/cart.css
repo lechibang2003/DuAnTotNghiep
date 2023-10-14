@@ -346,7 +346,7 @@ body {
 }
 
 .banner-big .wraper aside .container-fluid .product-container .product-row .img-cell {
-    width: 190px;
+    width: 80px;
     height: 80px;
     margin-left: 18px;
     padding-right: 0px;
@@ -482,6 +482,22 @@ footer {
     border-bottom-right-radius: 60px;
     padding-top: 80px;
     padding-bottom: 30px;
+}
+
+footer .ft .logo-footer {
+    width: 150px;
+    height: 100px;
+}
+
+footer .ft ul li a {
+    text-decoration: none;
+    line-height: 50px;
+
+}
+
+footer .ft ul li {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* end */

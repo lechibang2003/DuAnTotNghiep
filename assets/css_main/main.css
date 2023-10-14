@@ -666,22 +666,21 @@ body {
     width: 130%;
     height: auto;
     filter: drop-shadow(15px 12px 10px rgba(46, 46, 46, 0.7));
-    animation: fade 6s infinite;
-    animation-delay: -2s;
+    animation: fade 5s ease infinite;
 }
 
 @keyframes fade {
 
     0% {
-        transform: translateY(0);
+        top: 0px;
     }
 
     50% {
-        transform: translateY(-10%);
+        top: -15px;
     }
 
     100% {
-        transform: translateY(0);
+        top: 0px;
     }
 }
 
@@ -744,6 +743,22 @@ footer {
     border-bottom-right-radius: 60px;
     padding-top: 80px;
     padding-bottom: 30px;
+}
+
+footer .ft .logo-footer {
+    width: 150px;
+    height: 100px;
+}
+
+footer .ft ul li a {
+    text-decoration: none;
+    line-height: 50px;
+
+}
+
+footer .ft ul li {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* end */

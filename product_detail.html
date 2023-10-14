@@ -32,9 +32,8 @@
                 <nav class="navb navbar-expand-lg navbar-light bg-light">
                     <a href="#"><img src="assets/images/yum-logo.png" alt="yum-logo.ong"
                             class="yum-logo navbar-brand"></a>
-                    <button class="navbar-toggler collapsed" type="button" 
-                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
+                    <button class="navbar-toggler collapsed" type="button" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="bi bi-list icon-list"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -57,7 +56,7 @@
                         <a href="../login.html">
                             <div class="btn-sign">Sign In</div>
                         </a>
-                        <a href="#">
+                        <a href="/cart.html">
                             <div class="btn-cart"><i class="bi bi-bag"></i>
                                 <span
                                     class="tb-cart position-absolute start-80 translate-middle bg-danger rounded-circle"
@@ -116,7 +115,8 @@
                                                         class="bi bi-cart-plus"></i>
                                                     Thêm Giỏ
                                                     Hàng</button></a>
-                                            <a href="../payment_method.html"><button class="button-buy">Mua Ngay</button> </a>
+                                            <a href="../payment_method.html"><button class="button-buy">Mua
+                                                    Ngay</button> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -146,7 +146,7 @@
             <div class="image-four">
                 <div class="wraper1">
                     <div class="container mt-3 col-md-9">
-                        <h2>Mô Tả Sản Phẩm</h2>
+                        <h4>Mô Tả Sản Phẩm</h4>
                         <p class="mt-3">Khi làm burger, thông thường, bánh burger sẽ được chín nhẹ trên bề mặt nóng, sau
                             đó
                             được xếp lên
@@ -157,8 +157,6 @@
                             Một số biến thể của Burger Classic có thể bao gồm thêm phô mai chảo, gia vị đặc biệt, hoặc
                             thêm
                             các loại gia vị khác nhau...
-                            <!-- <span class="text-mota" data-bs-toggle="collapse" data-bs-target="#demo"
-                                style="cursor: pointer;">...Xem Thêm</span> -->
                         </p>
                         <div id="demo" class="collapse">
                             <span> Burger Classic là một loại burger truyền thống với những thành phần cơ bản như
@@ -228,16 +226,192 @@
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
+                                    <span class="visually-hidden">lui</span>
                                 </button>
                                 <button class="carousel-control-next" type="button"
                                     data-bs-target="#carouselExampleDark" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
+                                    <span class="visually-hidden">tiếp</span>
                                 </button>
                             </div>
                         </div>
-                        <div class="xemthem" data-bs-toggle="collapse" data-bs-target="#demo"><span>More</span></div>
+                        <div class="xemthem" data-bs-toggle="collapse" data-bs-target="#demo"><span>Xem Thêm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wraper1 mt-5">
+                    <div class="container col-md-9">
+                        <div class="reviews">
+                            <h4 class="section-title mb-4 mt-3">Đánh Giá Và Bình Luận</h4>
+                            <div class="card-header-comment mb-4">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                            data-bs-target="#home-tab-pane" type="button" role="tab"
+                                            aria-controls="home-tab-pane" aria-selected="true">Tất Cả</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sao5-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sao5-tab-pane" type="button" role="tab"
+                                            aria-controls="sao5-tab-pane" aria-selected="false">5 Sao()</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sao4-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sao4-tab-pane" type="button" role="tab"
+                                            aria-controls="sao4-tab-pane" aria-selected="false">4 Sao()</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sao3-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sao3-tab-pane" type="button" role="tab"
+                                            aria-controls="sao3-tab-pane" aria-selected="false">3 Sao()</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sao2-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sao2-tab-pane" type="button" role="tab"
+                                            aria-controls="sao2-tab-pane" aria-selected="false">2 Sao()</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="sao1-tab" data-bs-toggle="tab"
+                                            data-bs-target="#sao1-tab-pane" type="button" role="tab"
+                                            aria-controls="sao1-tab-pane" aria-selected="false">1 Sao()</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="review tab-content" id=" myTabContent">
+                                <div class="user-review tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                    aria-labelledby="home-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                    <hr>
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                    <hr>
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <div class="user-review tab-pane fade " id="sao5-tab-pane" role="tabpanel"
+                                    aria-labelledby="sao5-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                    <hr>
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <div class="user-review tab-pane fade" id="sao4-tab-pane" role="tabpanel"
+                                    aria-labelledby="sao4-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <div class="user-review tab-pane fade" id="sao3-tab-pane" role="tabpanel"
+                                    aria-labelledby="sao3-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <div class="user-review tab-pane fade" id="sao2-tab-pane" role="tabpanel"
+                                    aria-labelledby="sao2-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <div class="user-review tab-pane fade" id="sao1-tab-pane" role="tabpanel"
+                                    aria-labelledby="sao1-tab" tabindex="0">
+                                    <div class="info-all">
+                                        <div class="user-info">
+                                            <span>
+                                                <img src="/assets/images/avatar-1.jpg" alt="User Avatar"
+                                                    style="width: 50px; height: 50px; border-radius: 100%;"
+                                                    class="user-avatar">
+                                                <span class="user-name">Tên người dùng</span> <br>
+                                                <span class="review-date">Ngày giờ đăng bình luận</span>
+                                            </span>
+                                        </div>
+                                        <p class="review-content">Nội dung bình luận</p>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,7 +419,7 @@
             <!-- <img class="myimagefood5" src="assets/images/food5.png" alt="food5"> -->
             <div class="footer">
                 <!-- Footer -->
-                <footer class="text-center text-black">
+                <footer class="text-center text-black d-flex justify-content-center">
                     <!-- Grid container -->
                     <div class="container p-4">
                         <!-- Section: Social media -->
@@ -254,10 +428,6 @@
                             <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
                                     class="fab fa-facebook-f"></i></a>
 
-                            <!-- Twitter -->
-                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
-                                    class="fab fa-twitter"></i></a>
-
                             <!-- Google -->
                             <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
                                     class="fab fa-google"></i></a>
@@ -265,10 +435,6 @@
                             <!-- Instagram -->
                             <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
                                     class="fab fa-instagram"></i></a>
-
-                            <!-- Linkedin -->
-                            <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
-                                    class="fab fa-linkedin-in"></i></a>
 
                             <!-- Github -->
                             <a class="btn btn-outline-dark btn-floating m-1" href="#!" role="button"><i
@@ -285,7 +451,8 @@
                                     <div class="col-auto">
                                         <p class="pt-2">
                                             <strong>Đăng ký để nhận thông tin mới nhất
-                                                <br> của chúng tôi!</strong>
+                                                <br> của chúng tôi!
+                                            </strong>
                                         </p>
                                     </div>
                                     <!--Grid column-->
@@ -305,7 +472,7 @@
                                     <div class="col-auto">
                                         <!-- Submit button -->
                                         <button type="submit" class="btn btn-outline-dark mb-4">
-                                            Subscribe
+                                            Xác Nhận
                                         </button>
                                     </div>
                                     <!--Grid column-->
@@ -318,23 +485,39 @@
                         <!-- Section: Links -->
                         <section class="ft">
                             <!--Grid row-->
-                            <div class="row">
+                            <div class="row  d-flex justify-content-center">
                                 <!--Grid column-->
-                                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 class="text-uppercase">Links</h5>
+                                <div class="col-lg-5 col-md-12 mb-4 mb-md-0 px-5">
+                                    <h5 class="text-center">
+                                        <span class="d-flex"><b>Yummy</b></span>
+                                    </h5>
 
-                                    <ul class="list-unstyled mb-0">
+                                    <ul class="list-unstyled mb-0 col-md-24">
                                         <li>
-                                            <a href="#!" class="text-black">Link 1</a>
+                                            <a href="#" class="text-black">Bán Thức Ăn Online Yummy</a>
                                         </li>
                                         <li>
-                                            <a href="#!" class="text-black">Link 2</a>
+                                            <a href="#!" class="text-black"><b>Trụ Sở Chính:</b> Đường số 22, phường
+                                                Thường Thạnh, quận Cái Răng, TP Cần Thơ
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-5 col-md-12 mb-4 mb-md-0 px-5">
+                                    <h5 class="text-center">
+                                        <span class="d-flex"><b>Liên Hệ</b></span>
+                                    </h5>
+
+                                    <ul class="list-unstyled ">
+                                        <li>
+                                            <a href="#" class="text-black">Yummy: banglcpc04088@fpt.edu.vn</a>
                                         </li>
                                         <li>
-                                            <a href="#!" class="text-black">Link 3</a>
+                                            <a href="#!" class="text-black">Liên Hệ: 0943925652</a>
                                         </li>
                                         <li>
-                                            <a href="#!" class="text-black">Link 4</a>
+                                            <a href="#!" class="text-black">Chính Sách Bảo Mật</a>
                                         </li>
                                     </ul>
                                 </div>
