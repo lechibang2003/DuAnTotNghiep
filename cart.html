@@ -23,6 +23,11 @@
 <link rel="stylesheet" href="assets/css_main/cart.css">
 
 <body>
+    <div id="loader">
+        <span>
+            <img src="/assets/images/loading.gif" alt="img/loading">
+        </span>
+    </div>
     <div class="containerr ">
         <div class="image_big">
             <div class="image-one"></div>
@@ -284,11 +289,22 @@
         <a href="#" class="top-home"><span><i class="bi bi-arrow-up-square-fill"></i></span></a>
     </div>
 
+
     <script src="assets/js/jquery.min.js"></script>
     <!-- <script src="assets/js/bootstrap.min.js"></script> -->
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // loading khi refresh
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 2000);
+        };
+        $(function () {
+            loader();
+        });
+        // end
 
         $(function () {
             $(window).scroll(function () {

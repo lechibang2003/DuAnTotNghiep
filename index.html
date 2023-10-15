@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Yummy</title>
+
 </head>
 
 <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
@@ -23,6 +24,11 @@
 <link rel="stylesheet" href="assets/css_main/main.css">
 
 <body>
+    <div id="loader">
+        <span>
+            <img src="/assets/images/loading.gif" alt="img/loading">
+        </span>
+    </div>
     <div class="containerr ">
         <div class="image_big">
             <div class="image-one"></div>
@@ -30,7 +36,7 @@
             <div class="image-two">
                 <img src="assets/images/leaves.png" alt="leaves.png" class="food2">
                 <nav class="navb navbar-expand-lg navbar-light bg-light">
-                    <a href="#"><img src="assets/images/yum-logo.png" alt="yum-logo.ong"
+                    <a href="/index.html"><img src="assets/images/yum-logo.png" alt="yum-logo.ong"
                             class="yum-logo navbar-brand"></a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +45,7 @@
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active home" aria-current="page">Trang Chủ</a>
+                                <a href="/index.html" class="nav-link active home" aria-current="page">Trang Chủ</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">Giới Thiệu</a>
@@ -169,6 +175,67 @@
                         </p>
                     </article>
                 </div>
+
+                <!-- slider -->
+                <div class="card-slider">
+                    <span class="text-slide">From Our Menu</span>
+                    <div class="card-wrapper">
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                        <div class="card text-center slide-card">
+                            <img src="/assets/images/cta-banner.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Humburger</h5>
+                                <p class="card-text">35.000đ</p>
+                                <a href="#" class="btn btn-danger d-flex justify-content-center">Thêm Giỏ Hàng</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="btn btn-outline slide-prev"><i class="bi bi-arrow-left"></i></button>
+                        <button class="btn btn-outline slide-next"><i class="bi bi-arrow-right"></i></button>
+
+                    </div>
+                </div>
+                <!-- end -->
             </div>
             <img class="myimage" src="assets/images/food4.png" alt="food4">
             <section id="menu-food">
@@ -884,6 +951,7 @@
         <a href="#" class="top-home"><span><i class="bi bi-arrow-up-square-fill"></i></span></a>
     </div>
 
+
     <!-- <script src="assets/js/angular.min.js"></script> -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -891,6 +959,16 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // loading khi refresh
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 2000);
+        };
+        $(function () {
+            loader();
+        });
+        // end
 
         $(function () {
             $(window).scroll(function () {
@@ -910,6 +988,82 @@
         });
         //end
 
+        // slide
+        const cardWrapper = document.querySelector('.card-wrapper');
+        const prevButton = document.querySelector('.slide-prev');
+        const nextButton = document.querySelector('.slide-next');
+
+        const cardWidth = 250;
+        let translateXValue = 0;
+        let slideInterval;
+
+        // Hàm xử lý khi đến ảnh cuối
+        const handleLastSlide = () => {
+            if (translateXValue === -(cardWrapper.childElementCount - 4) * cardWidth) {
+                cardWrapper.style.transition = 'none';
+                translateXValue = 0;
+                cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+                setTimeout(() => {
+                    cardWrapper.style.transition = 'transform 0.4s ease-in-out';
+                    translateXValue -= cardWidth;
+                    cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+                }, 100);
+            }
+        };
+
+        // Hàm xử lý khi đến ảnh đầu
+        const handleFirstSlide = () => {
+            if (translateXValue === 0) {
+                cardWrapper.style.transition = 'none';
+                translateXValue = -(cardWrapper.childElementCount - 5) * cardWidth;
+                cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+                setTimeout(() => {
+                    cardWrapper.style.transition = 'transform 0.4s ease-in-out';
+                    translateXValue += cardWidth;
+                    cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+                }, 100);
+            }
+        };
+
+        // Hàm dừng tự động chuyển slide
+        const stopSlide = () => {
+            clearInterval(slideInterval);
+        };
+
+        // Hàm bắt đầu tự động chuyển slide
+        const startSlide = () => {
+            slideInterval = setInterval(() => {
+                nextButton.click();
+            }, 3000);
+        };
+
+        // Nút tiến, lùi cho slide
+        prevButton.addEventListener('click', () => {
+            translateXValue += cardWidth;
+            if (translateXValue > 1) {
+                translateXValue = -(cardWrapper.childElementCount - 4) * cardWidth;
+            }
+            cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+        });
+
+
+        nextButton.addEventListener('click', () => {
+            translateXValue -= cardWidth;
+            if (translateXValue < -(cardWrapper.childElementCount - 4) * cardWidth) {
+                translateXValue = 0;
+            }
+            cardWrapper.style.transform = `translateX(${translateXValue}px)`;
+        });
+        // Sự kiện rê chuột vào nút tiến hoặc lùi slide
+        prevButton.addEventListener('mouseover', stopSlide);
+        nextButton.addEventListener('mouseover', stopSlide);
+
+        // Sự kiện rê chuột ra khỏi nút tiến hoặc lùi slide
+        prevButton.addEventListener('mouseout', startSlide);
+        nextButton.addEventListener('mouseout', startSlide);
+
+        // Bắt đầu tự động chuyển slide
+        startSlide();
 
     </script>
 </body>

@@ -14,6 +14,23 @@ body {
     background-attachment: fixed;
 }
 
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
 ::-webkit-scrollbar {
     width: 8px;
     background-color: var(--bgtoggle-color);
@@ -120,7 +137,7 @@ body {
 
 /* image five */
 .containerr #menu-food {
-    background-color: var(--body-color);
+    /* background-color: var(--body-color); */
     /* Màu nền với độ mờ 50% */
     background-size: cover;
     background-repeat: no-repeat;
@@ -399,10 +416,8 @@ body {
     padding-top: 20px;
     width: 90%;
     height: auto;
-    background: var(--bgtoggle-color);
     z-index: 0;
     border-radius: 60px;
-    border: 2px solid white;
 }
 
 /* end */
@@ -413,13 +428,11 @@ body {
     position: relative;
     top: -130px;
     left: 5%;
-    background: var(--bgtoggle-color);
     width: 90%;
     height: auto;
-    padding: 50px;
+    padding: 20px;
     z-index: 1;
     border-radius: 60px;
-    border: 2px solid white;
 }
 
 .image-four .container p {
@@ -434,18 +447,16 @@ body {
 }
 
 .image-four .container .xemthem {
-    background: white;
     opacity: 0.8;
     cursor: pointer;
     width: 90px;
     height: 35px;
     padding-top: 5px;
     border-radius: 60px;
-    border: 1px solid rgb(145, 145, 145);
     text-align: center;
     z-index: 1;
     position: absolute;
-    bottom: -15px;
+    bottom: -5px;
     left: 45%;
 }
 
@@ -715,13 +726,14 @@ footer .ft ul li {
     .image-two header article iframe {
         position: absolute;
         top: -370px;
-        left: -35px;
+        left: -25px;
         width: 400px;
         height: 400px;
         display: flex;
         justify-content: center;
         justify-items: center;
         align-items: center;
+        filter: none;
     }
 
     .image-two header article .ifarm-images img {
@@ -769,6 +781,7 @@ footer .ft ul li {
     }
 
     /* end */
+    
 
 }
 
@@ -935,6 +948,7 @@ footer .ft ul li {
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
 
     .image-two header article .ifarm-images img {
@@ -947,6 +961,7 @@ footer .ft ul li {
         justify-content: center;
         align-items: center;
         display: inline-flex;
+        text-align: center;
     }
 
     .image-four .container .xemthem {
@@ -971,6 +986,8 @@ footer .ft ul li {
     }
 
     /* end */
+
+    
 
 }
 
@@ -1127,6 +1144,7 @@ footer .ft ul li {
         left: 220px;
         width: 400px;
         height: 100%;
+        transform: translate(0, 0);
     }
 
     .image-two header article .ifarm-images img {

@@ -23,6 +23,11 @@
 <link rel="stylesheet" href="assets/css_main/payment_method.css">
 
 <body>
+    <div id="loader">
+        <span>
+            <img src="/assets/images/loading.gif" alt="img/loading">
+        </span>
+    </div>
     <div class="containerr ">
         <div class="image_big">
             <div class="image-one"></div>
@@ -348,6 +353,16 @@
     <script src="/assets/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // loading khi refresh
+        var loader = function () {
+            setTimeout(function () {
+                $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+            }, 2000);
+        };
+        $(function () {
+            loader();
+        });
+        // end
 
         $(function () {
             $(window).scroll(function () {

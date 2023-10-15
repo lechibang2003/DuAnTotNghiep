@@ -15,6 +15,32 @@ body {
     transition: scroll-behavior 0.5s;
 }
 
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
 ::-webkit-scrollbar {
     width: 8px;
     background-color: var(--bgtoggle-color);
@@ -123,7 +149,7 @@ body {
     left: 5%;
     bottom: 8%;
     width: 90%;
-    height: 900px;
+    height: 1550px;
     margin-top: 70px;
     /* display: flex; */
     justify-content: center;
@@ -243,25 +269,19 @@ body {
     height: 35%;
 }
 
-/* sp2 */
+/*  */
 .containerr .image-four .food-sp2 img {
     position: absolute;
     width: 200px;
     top: 50px;
     left: 32.8%;
-    filter: drop-shadow(5px 5px 5px rgba(68, 68, 68, 0.7));
-}
-
-.containerr .image-four .food-sp2 img:hover {
-    cursor: pointer;
-    transform: scale(102%);
 }
 
 .containerr .image-four .food-sp2 .wrap-food-sp2 {
-    position: relative;
+    background: var(--bgtoggle-color);
+    position: absolute;
     top: 170px;
     left: 32%;
-    background: var(--bgtoggle-color);
     width: 220px;
     height: 250px;
     border-radius: 15%;
@@ -330,10 +350,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-
-/* .containerr .image-four .food-sp2 .wrap-food-sp2 .tym:hover {
-    color: red;
-} */
+/*  */
 
 .containerr .image-four .food-sp2 .mota-sp2 {
     position: absolute;
@@ -383,6 +400,93 @@ body {
     font-size: 18px;
 }
 
+/* end */
+
+/* slide card */
+.card-slider {
+    width: 80%;
+    overflow: hidden;
+    padding-top: 50%;
+    margin-left: 10%;
+}
+
+.card-slider .text-slide {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.card-slider .card-wrapper {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    transition: transform 0.8s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-slider .card-wrapper .card-body .card-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-slider .card-wrapper .card-body .card-text {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(196, 3, 3);
+}
+
+.card-slider .card-wrapper .slide-card {
+    background: var(--bgtoggle-color);
+    border: 1px solid var(--body-color);
+}
+
+.card-slider .controls {
+    position: absolute;
+    top: 95%;
+    left: 40%;
+    display: flex;
+    color: #0d1116;
+    gap: 100%;
+
+}
+
+.card-slider .controls button {
+    min-width: 50px;
+    padding: 0;
+}
+
+.card-slider .card {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.card-slider .btn-outline i {
+    font-size: 28px;
+}
+
+.card-slider .slide-prev {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-left: 10px;
+}
+
+.card-slider .slide-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0;
+}
+
+
+/* end */
+
 /* image five */
 .containerr #menu-food {
     background-color: var(--body-color);
@@ -411,6 +515,28 @@ body {
     top: 70px;
     right: 7%;
 }
+
+.containerr .image-five .tabpanel {
+    position: absolute;
+    top: 70px;
+    right: 2%;
+}
+
+.containerr .image-five .tabpanel .custom-tab-link {
+    margin-right: 2em;
+    background-color: rgb(147, 147, 147);
+    border-radius: 10px 0 10px 0;
+    border: none;
+    border-bottom: 1px solid transparent;
+}
+
+.containerr .image-five .tabpanel .custom-tab-link.active,
+.containerr .image-five .tabpanel .custom-tab-link:hover {
+    background-color: rgb(199, 58, 58);
+    border-color: transparent;
+}
+
+/* end */
 
 .containerr .image-five h2 {
     line-height: 4em;
@@ -684,6 +810,20 @@ body {
     }
 }
 
+.image-two header aside img:hover {
+    animation: spin 10s ease infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .image-two header article p {
     text-align: left;
     font-size: 2.5rem;
@@ -733,6 +873,9 @@ header .girdd {
     background-color: rgb(34, 34, 34);
 }
 
+/* end */
+
+
 footer {
     position: relative;
     top: 0;
@@ -780,7 +923,7 @@ footer .ft ul li {
 }
 
 /* responsive */
-@media only screen and (min-width: 375px) and (max-width: 575.5px) {
+@media screen and (min-width: 375px) and (max-width: 575.5px) {
 
     /* CSS règles cho thiết bị tablet */
     .containerr .image-two {
@@ -879,7 +1022,7 @@ footer .ft ul li {
         left: 5%;
         bottom: 8%;
         width: 90%;
-        height: 750px;
+        height: 1300px;
         margin-top: 70px;
     }
 
@@ -1208,6 +1351,37 @@ footer .ft ul li {
         transition: all 0.5s ease;
     }
 
+    /* slider */
+    .card-slider {
+        width: 80%;
+        overflow: hidden;
+        padding-top: 570px;
+        margin-left: 65px;
+    }
+
+    .card-slider .card-wrapper {
+        width: max-content;
+
+    }
+
+    .card-slider .controls {
+        margin-top: 20px;
+        margin-left: -80px;
+    }
+
+    .card-slider .text-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 33px;
+    }
+
+    .card-slider .card-wrapper .slide-card {
+        width: 200px;
+    }
+
+    /* end */
+
 }
 
 @media only screen and (min-width: 576px) and (max-width: 766.5px) {
@@ -1307,7 +1481,7 @@ footer .ft ul li {
         left: 5%;
         bottom: 8%;
         width: 90%;
-        height: 750px;
+        height: 1300px;
         margin-top: 70px;
     }
 
@@ -1619,6 +1793,37 @@ footer .ft ul li {
         height: 40px;
     }
 
+    /* slider */
+    .card-slider {
+        width: 80%;
+        overflow: hidden;
+        padding-top: 570px;
+        margin-left: 65px;
+    }
+
+    .card-slider .card-wrapper {
+        width: max-content;
+
+    }
+
+    .card-slider .controls {
+        margin-top: 20px;
+        margin-left: -45px;
+    }
+
+    .card-slider .text-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    .card-slider .card-wrapper .slide-card {
+        width: 200px;
+    }
+
+    /* end */
+
 }
 
 /* end responsive cho thiết bị di động */
@@ -1721,7 +1926,7 @@ footer .ft ul li {
         left: 5%;
         bottom: 8%;
         width: 90%;
-        height: 700px;
+        height: 1300px;
         margin-top: 70px;
     }
 
@@ -1898,6 +2103,7 @@ footer .ft ul li {
         font-weight: bold;
         padding-bottom: 220px;
         text-align: center;
+        margin-left: 20px;
     }
 
     .containerr #menu-food {
@@ -2024,6 +2230,36 @@ footer .ft ul li {
         height: 40px;
     }
 
+    /* slider */
+    .card-slider {
+        width: 80%;
+        overflow: hidden;
+        padding-top: 550px;
+        margin-left: 100px;
+    }
+
+    .card-slider .card-wrapper {
+        width: max-content;
+
+    }
+
+    .card-slider .controls {
+        margin-top: 20px;
+        margin-left: -20px;
+    }
+
+    .card-slider .text-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+
+    .card-slider .card-wrapper .slide-card {
+        width: 200px;
+    }
+
+    /* end */
 }
 
 /* end responsive cho máy tính bảng */
@@ -2031,7 +2267,7 @@ footer .ft ul li {
 
 
 /* Định nghĩa kích thước responsive cho màn hình máy tính và laptop */
-@media screen and (min-width: 993px) {
+@media screen and (min-width: 993px) and (max-width: 1199.5px) {
     /* CSS règles cho màn hình máy tính và laptop */
 
     /* navbar */
@@ -2095,7 +2331,7 @@ footer .ft ul li {
         left: 5%;
         bottom: 8%;
         width: 90%;
-        height: 770px;
+        height: 1300px;
         margin-top: 70px;
     }
 
@@ -2418,13 +2654,43 @@ footer .ft ul li {
         z-index: 1;
     }
 
+    /* slider */
+    .card-slider {
+        width: 80%;
+        overflow: hidden;
+        padding-top: 550px;
+        margin-left: 100px;
+    }
+
+    .card-slider .card-wrapper {
+        width: max-content;
+
+    }
+
+    .card-slider .controls {
+        margin-top: 20px;
+        margin-left: -10px;
+    }
+
+    .card-slider .text-slide {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-slider .card-wrapper .slide-card {
+        width: 200px;
+    }
+
+    /* end */
+
 }
 
 /* end responsive cho màn hình máy tính và laptop */
 
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1286px) {
     .navb .btn-sign {
         position: absolute;
         right: 10%;
@@ -2480,7 +2746,7 @@ footer .ft ul li {
         left: 5%;
         bottom: 8%;
         width: 90%;
-        height: 900px;
+        height: 1500px;
         margin-top: 70px;
     }
 
@@ -2664,7 +2930,7 @@ footer .ft ul li {
 
     .containerr #menu-food {
         position: relative;
-        top: 0;
+        top: 100%;
         left: 5%;
         width: 90%;
         height: auto;
@@ -2701,6 +2967,8 @@ footer .ft ul li {
         width: 220px;
         height: 250px;
     }
+
+    /* end */
 
     /*  */
 
@@ -2800,5 +3068,27 @@ footer .ft ul li {
         cursor: pointer;
         z-index: 1;
     }
+
+    /* slider */
+    .card-slider .card-wrapper {
+        display: flex;
+        gap: 1rem;
+        width: max-content;
+    }
+
+    .card-slider {
+        width: 80%;
+        overflow: hidden;
+        padding-top: 55%;
+        margin-left: 10%;
+    }
+
+    .card-slider .controls {
+        position: absolute;
+        top: 95%;
+        left: 41%;
+    }
+
+    /* end */
 
 }

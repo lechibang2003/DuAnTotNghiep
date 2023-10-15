@@ -25,6 +25,11 @@
 </head>
 
 <body class="">
+  <div id="loader">
+    <span>
+      <img src="/assets/images/loading.gif" alt="img/loading">
+    </span>
+  </div>
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
@@ -148,11 +153,23 @@
     </section>
   </main>
   <!--   Core JS Files   -->
+  <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/popper.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script>
+    // loading khi refresh
+    var loader = function () {
+      setTimeout(function () {
+        $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+      }, 2000);
+    };
+    $(function () {
+      loader();
+    });
+    // end
+
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
       var options = {

@@ -26,6 +26,11 @@
 </head>
 
 <body class="">
+  <div id="loader">
+    <span>
+      <img src="/assets/images/loading.gif" alt="img/loading">
+    </span>
+  </div>
   <!-- Navbar -->
   <nav
     class="navbar navbar-expand-lg border-radius-lg top-0 z-index-3 shadow position-absolute mt-4 py-2 start-0 end-0 mx-4">
@@ -194,12 +199,25 @@
     </div>
   </main>
   <!--   Core JS Files   -->
+  <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/popper.min.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="/assets/js/argon-dashboard.min.js?v=2.0.4"></script>
+  <script>
+    // loading khi refresh
+    var loader = function () {
+      setTimeout(function () {
+        $('#loader').css({ 'opacity': 0, 'visibility': 'hidden' });
+      }, 2000);
+    };
+    $(function () {
+      loader();
+    });
+    // end
+  </script>
 </body>
 
 </html>
